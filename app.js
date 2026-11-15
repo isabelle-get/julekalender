@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 
 const app = express();
 app.use(express.static("public"));
+// mongoose.connect('http://localhost:27017/julekalender');
 
 app.set('view engine', 'ejs' )
 

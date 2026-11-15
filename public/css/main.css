@@ -1,0 +1,15 @@
+
+
+
+/* for the admin page */
+body{
+    background-color: aquamarine;
+}
+
+.skrevetSvar{
+    display: none;
+}
+
+.flervalg{
+    display: none;
+}

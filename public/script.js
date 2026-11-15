@@ -16,9 +16,17 @@ function todayDate() {
 
     theDayN.textContent = theDateInN;
     theDayS.textContent = theDateInS;
-}
+};
 
 todayDate()
+
+
+
+
+
+
+    
+
 
 
 
