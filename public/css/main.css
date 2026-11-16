@@ -1,10 +1,60 @@
-
-
-
-/* for the admin page */
 body{
     background-color: aquamarine;
+    margin: 10px;
 }
+/* for the admin page */
+
+.wrapper h1{
+    font-size: 60px;
+}
+
+.wrapper h2{
+    font-size: 50px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    border-radius: 30px;
+    background-color: azure;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+
+.dagene{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.dagene p{
+    font-size: 40px;
+
+}
+
+ form{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+   
+}
+
+::file-selector-button{
+    width: 300px;
+    height: 200px;
+    background-color: rgb(251, 0, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+
 
 .skrevetSvar{
     display: none;
@@ -12,4 +62,30 @@ body{
 
 .flervalg{
     display: none;
+}
+
+/* for index side */
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dato{
+    display: flex;
+    /* align-self: center; */
+    justify-self: center;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.dato h3{
+    font-size: 40px;
+}
+
+#theDayN{
+    font-size: 70px;
+    position: relative;
+    bottom: 55px;
 }
