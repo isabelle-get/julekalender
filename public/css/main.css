@@ -74,18 +74,17 @@ body{
 .dato{
     display: flex;
     /* align-self: center; */
-    justify-self: center;
     justify-content: space-between;
     width: 600px;
 }
 
 .top h2{
-    color: aliceblue;
+    color: rgb(126, 13, 11);
 }
 
 .dato h3{
     font-size: 40px;
-    color: aliceblue;
+    color: rgb(126, 13, 11);
 }
 
 #theDayN{
@@ -109,6 +108,14 @@ body{
 .rundt {
     position: relative;
     z-index: 1;
+    background-color: rgb(251, 232, 213);
+    width: 700px;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    flex-direction: column;
 }
 
 .days{
@@ -116,10 +123,11 @@ body{
     align-self: center;
     justify-self: center;
 
+
     display: grid;
 
     grid-template-columns: repeat(6, 100px);
-    grid-template-rows: repeat(6, 100px);
+    grid-template-rows: repeat(6, 95px);
 
     grid-template-areas:
         "box1 box2 box2 box3 box4 box5"
@@ -141,6 +149,7 @@ body{
     font-size: 25px;
     text-decoration: none;
     color: beige;
+    border-radius: 15px;
     
     transition: 0.25s;
 
