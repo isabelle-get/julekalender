@@ -1,8 +1,7 @@
 body{
-    background-color: aquamarine;
-    margin: 10px;
+    margin: 0;
 }
-/* for the admin page */
+/* ---------------for the admin page --------------*/
 
 .wrapper h1{
     font-size: 60px;
@@ -64,7 +63,7 @@ body{
     display: none;
 }
 
-/* for index side */
+/* --------------for index side-------------- */
 
 .top{
     display: flex;
@@ -80,12 +79,143 @@ body{
     width: 600px;
 }
 
+.top h2{
+    color: aliceblue;
+}
+
 .dato h3{
     font-size: 40px;
+    color: aliceblue;
 }
 
 #theDayN{
     font-size: 70px;
     position: relative;
     bottom: 55px;
+}
+
+
+#backgroundVideo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+.rundt {
+    position: relative;
+    z-index: 1;
+}
+
+.days{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(6, 100px);
+
+    grid-template-areas:
+        "box1 box2 box2 box3 box4 box5"
+        "box6 box7 box8 box8 box4 box9"
+        "box6 box10 box11 box12 box13 box14"
+        "box15 box16 box17 box17 box18 box14"
+        "box19 box20 box21 box22 box22 box22"
+        "box23 box23 box21 box24 box24 box24";
+
+    gap: 10px;
+}
+
+
+.window{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-decoration: none;
+    color: beige;
+    
+    transition: 0.25s;
+
+}
+
+.window:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+
+/* -------------for bruker side----------- */
+.around {
+    
+    background-color: aliceblue;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.brukerLI{
+    height: 470px;
+    width: 470px;
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0.509);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  background-image: linear-gradient(to bottom right, rgb(248, 248, 255), rgba(224, 226, 252, 0.808), #c0bff5dc);
+    box-shadow: 0 0 30px rgba(115, 115, 252, 0.744);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    align-self: center;
+
+}
+
+.brukerLI h1{
+    color: rgb(22, 22, 84);
+}
+
+.brukerLI form{
+    width: 300px;
+    gap: 10px;
+    margin-top: 20px;
+}
+.brukerLI label{
+
+    color: rgb(22, 22, 84);
+}
+
+.brukerLI input{
+    width: 300px;
+    margin: 0%;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+}
+
+.brukerLI button{
+    width: 300px;
+    margin: 0%;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(22, 22, 84);
+    color: aliceblue;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+video{
+
+    z-index: 0;
 }
