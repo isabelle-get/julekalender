@@ -1,6 +1,8 @@
 const express = require("express")
 const mongoose = require("mongoose")
 
+const Bruker = require("./models/Bruker");
+
 const app = express();
 app.use(express.static("public"));
 mongoose.connect('mongodb://localhost:27017/julekalender');
@@ -8,6 +10,7 @@ mongoose.connect('mongodb://localhost:27017/julekalender');
 app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs' )
+
 
 app.get("/", (req,res)=>{
     res.render("index")
@@ -34,18 +37,20 @@ app.post("/bruker", async (req,res)=>{
     
     
     const eksisterBruker = await Bruker.findOne({ email });
+
+    const brukere = new Bruker({email});
     await brukere.save()
-    const brukere = new Bruker({
-        email
-    });
 
-    if({email}.endsWith("@afk.no")){
-        console.log("yes")
-    }else{
-        console.log("no")
-    }
+    if (eksisterBruker) {
+            console.log("hei")
+        }
 
+        const bruker = new Bruker({ email });
+        await bruker.save();
+})
 
+app.post("/adminside", (req,res)=>{
+    
 })
 
 app.listen(4002)
