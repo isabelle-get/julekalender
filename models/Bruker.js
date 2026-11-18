@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const userSchema2 = mongoose.Schema({
+const brukerSchema = mongoose.Schema({
     email: {
         type: String,
         match: /.+@afk\.no$/,
@@ -8,6 +8,6 @@ const userSchema2 = mongoose.Schema({
 
 });
 
-const user = mongoose.model("user", userSchema2)
+const user = mongoose.model("user", brukerSchema)
 
-module.exports = user
+module.exports = user;
