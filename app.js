@@ -50,7 +50,7 @@ app.post("/bruker", async (req,res)=>{
 })
 
 app.post("/adminside", (req,res)=>{
-    
+
 })
 
 app.listen(4002)

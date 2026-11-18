@@ -1,7 +1,7 @@
 
 :root{
-    --color1: rgb(250, 236, 218);
-    --color2: rgb(179, 34, 40);
+    --text-color1: rgb(249, 245, 240);
+    --text-color2: rgb(215, 182, 114);
     --color3: rgb(39, 78, 57);
     --color3-under: rgb(24, 52, 37);
     --color4: rgb(138, 36, 42);
@@ -77,6 +77,19 @@ body{
 }
 
 /* --------------for index side-------------- */
+.rundtAll{
+    background-image: cover;
+
+}
+
+.rundtAll img{
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    width: cover;
+    overflow: hidden;
+
+}
 .rundt{
     display: flex;
     flex-direction: column;
@@ -86,21 +99,48 @@ body{
 }
 
 .toppen{
-    background-color: #634333;
+    /* background-color: #634333; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 
 }
+
+
 
 .top{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .dato{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Dunder{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #634333; */
+}
+
+.dato h3{
+    font-size: 50px;
+    margin: 5px;
+}
+
+#theDayN{
+    font-size: 100px;
 }
 
 .days{
