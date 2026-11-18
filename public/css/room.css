@@ -1,0 +1,16 @@
+body{
+
+    background-color: aqua;
+
+}
+
+.lagene{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#snowOutside{
+    position: absolute;
+    width: 300px;
+}
