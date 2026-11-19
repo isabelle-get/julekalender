@@ -43,6 +43,8 @@ app.get("/adminside", async (req, res) => {
   console.log(decoded);
   const user =await Bruker.findOne({ _id: decoded.userId });
 
+  
+
   console.log(user);
 if(user.email === "monicastef@afk.no") {
     res.render("adminside");
