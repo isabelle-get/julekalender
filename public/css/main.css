@@ -1,13 +1,13 @@
 
 :root{
-    --color1: rgb(250, 236, 218);
-    --color2: rgb(179, 34, 40);
+    --text-color1: rgb(249, 245, 240);
+    --text-color2: rgb(234, 192, 107);
     --color3: rgb(39, 78, 57);
     --color3-under: rgb(24, 52, 37);
-    --color4: rgb(138, 36, 42);
+    --color4: rgb(39, 78, 57);
     --color4-under: rgb(119, 27, 32);
-    --color5: rgb(211, 187, 161);
-    --color5-under: rgb(161, 138, 115);
+    --color5: rgb(39, 78, 57);
+    --color5-under: rgb(220, 193, 165);
     --background-color:rgb(23, 61, 42);
 }
 
@@ -80,79 +80,36 @@ body{
 
 /* --------------for index side-------------- */
 
-.dato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 65px;
-    color: #eee4d3;
-}
 
-#theDayN {
-    font-family: Georgia, serif;
-    font-size: 75px;
-    color: #dcb66b;
-    margin: 0;
-    font-weight: normal;
-}
-
-.dato h2{
-    font-family: Georgia, serif;
-    font-size: 30px;
-}
-
-.days {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    width: 900px;
-}
-
-.window {
-    height: 160px;
-    width: 130px;
-    background-color: rgba(47, 83, 64, 0.9);
-    border: 1px solid #b99a5b;
-    border-radius: 6px;
-    color: #dcb66b;
-    font-family: Georgia, serif;
-    font-size: 38px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-sizing: border-box;
-
-    transition: 0.3s;
-}
-
-.window:hover {
-    background-color: rgba(65, 105, 79, 0.95);
-    transform: translateY(-4px) ;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
 
 /* -------------for bruker side----------- */
+.allAround{
+    background-image: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.allAround img{
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    width: cover;
+    overflow: hidden;
+}
+
 .around{
 
     display: flex;
+    /* justify-self: center;
+    align-self: center; */
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    width: 700px;
 
-    background:
-        radial-gradient(
-            rgba(255,255,255,0.12) 1px,
-            transparent 1.5px
-        ),
-        linear-gradient(145deg, var(--color3), var(--color3-under));
+    background-color: var(--color3);
 }
 
 .brukerLI{
@@ -166,8 +123,8 @@ body{
 }
 
 .brukerLI button{
-    background: linear-gradient(145deg, var(--color4), var(--color4-under));
-    color: #fff0df;
+    background: 145deg, var(--color4);
+    color: var(--text-color2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,7 +155,7 @@ body{
     margin-left: -350px;
     font-size: 30px;
     font-weight: bold;
-    color:var(--color5-under);
+    color: var(--text-color2);
 }
 
 .brukerLI h1{
