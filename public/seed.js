@@ -158,3 +158,5 @@ const questions = [
     correct_answer: "Glade jul"
   }
 ];
+
+module.exports = questions;

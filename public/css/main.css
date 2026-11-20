@@ -80,6 +80,91 @@ body{
 
 /* --------------for index side-------------- */
 
+.rundtAll{
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.rundtAll img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+.dato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 65px;
+    color: #eee4d3;
+}
+
+#theDayN {
+    font-family: Georgia, serif;
+    font-size: 75px;
+    color: #dcb66b;
+    margin: 0;
+    font-weight: normal;
+}
+
+.dato h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.days {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 900px;
+}
+
+.window {
+    height: 160px;
+    width: 130px;
+    border-radius: 6px;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.bigger{
+    background-color: rgba(87, 88, 87, 0.9);
+    color: #e6e6e5;
+    border: 2px solid #c0c0bf;
+    pointer-events: none;
+}
+
+
+
+.now{
+    background-color: rgba(57, 101, 78, 0.9);
+    color: #ecc982;
+    border: 2px solid #b99a5b;
+    box-shadow: 0 0 20px #ffc249;
+}
+
+.disabled{
+    background-color: rgba(47, 83, 64, 0.9);
+    color: #dcb66b;
+    border: 2px solid #b99a5b;
+}
 
 
 /* -------------for bruker side----------- */

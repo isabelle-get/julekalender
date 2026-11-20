@@ -1,15 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 
 const Bruker = require("./models/Bruker");
+const questions = require("./public/seed");
 
 const app = express();
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost:27017/julekalender");
-
+mongoose.connect(process.env.MONGODB_URI);
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
@@ -57,6 +58,9 @@ if(user.email === "monicastef@afk.no") {
 app.get("/julekalender/:id/", (req, res) => {
   console.log("req query", req.params);
   const id = req.params.id;
+  const seed = questions.find(question => question.id === Number(id));
+
+  res.render("julekalender", { seed });
 });
 
 app.post("/bruker", async (req, res) => {
@@ -83,4 +87,9 @@ app.post("/bruker", async (req, res) => {
 
 app.post("/adminside", (req, res) => {});
 
-app.listen(4002);
+
+const port = process.env.PORT;
+
+app.listen(port, () => {
+  console.log(`listening on http://localhost:${port}`);
+});

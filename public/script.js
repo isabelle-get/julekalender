@@ -3,12 +3,12 @@
     let theDayN = document.getElementById("theDayN")
     let theDayM = document.getElementById("theDayM")
 
-    let window = document.querySelectorAll(".window")
+    let windows = document.querySelectorAll(".window")
+    let theDate = new Date()
 function todayDate() {
 
     
-    let theDate = new Date()
-    
+
     let theDateInS = theDate.toLocaleDateString("no-NO", {
         weekday: "long"
     })
@@ -28,18 +28,18 @@ function todayDate() {
 
 todayDate()
 
-window.addEventListener("window", function(){
-    const day = Number(window.textContent)
+windows.forEach(windows =>{
+    const day = Number(windows.textContent)
+    const today = theDate.getDate()
+    const month = theDate.getMonth() 
 
-    if( theDayM === 11 && day < theDayN){
-        window.classLIst("bigger")
-    }else if(theDayM === 11 && day === theDayN){
-        window.classLIst("now")
+    if (month === 10 && today < day) {
+        windows.classList.add("bigger")
+    } else if (month === 10 && today === day) {
+        windows.classList.add("now")
     }else {
-        window.classList.add("disabled");
+        windows.classList.add("disabled")
     }
-
-
 })
 
 
@@ -49,7 +49,6 @@ window.addEventListener("window", function(){
 
 
     
-
 
 
 
