@@ -159,4 +159,8 @@ const questions = [
   }
 ];
 
-module.exports = questions;
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = questions;
+} else {
+  window.questions = questions;
+}
