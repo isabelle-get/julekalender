@@ -35,7 +35,7 @@ windows.forEach(windows =>{
 
     if (month === 10 && today < day) {
         windows.classList.add("bigger")
-    } else if (month === 10 && today === day) {
+    } else if (month === 11 && today === day) {
         windows.classList.add("now")
     }else {
         windows.classList.add("disabled")

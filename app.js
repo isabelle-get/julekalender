@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 
 const Bruker = require("./models/Bruker");
+const Quiz = require("./models/Quizzes");
 const questions = require("./public/seed");
 
 const app = express();
@@ -55,12 +56,17 @@ if(user.email === "monicastef@afk.no") {
 }
 });
 
-app.get("/julekalender/:id/", (req, res) => {
+app.get("/julekalender/:id/", async (req, res) => {
   console.log("req query", req.params);
   const id = req.params.id;
+
+  const quizzes = await Quiz.find();
+  console.log(quizzes[0]);
+
+
   const seed = questions.find(question => question.id === Number(id));
 
-  res.render("julekalender", { seed });
+  res.render("julekalender", { quizzes });
 });
 
 app.post("/bruker", async (req, res) => {
